@@ -71,7 +71,7 @@ The system will:
 
 When "Stop" is clicked, monitoring ends and reports are generated.
 
-##🧾 Generated Reports
+## 🧾 Generated Reports
 reporte.log: Plain text log with timestamp, process name, PID, and termination reason.
 
 reporte.json: Includes student information and a list of blocked processes in JSON format.
