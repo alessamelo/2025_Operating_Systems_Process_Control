@@ -22,6 +22,7 @@ This project implements a system to **monitor and block unauthorized processes**
 ## 🗂️ Project Structure
 
 project-root/
+
             │
             ├── gui.py # Graphical interface (Tkinter)
             ├── main.py # Main logic triggered by GUI
