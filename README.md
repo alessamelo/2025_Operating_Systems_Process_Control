@@ -23,28 +23,17 @@ This project implements a system to **monitor and block unauthorized processes**
 
 project-root/
             │
-
             ├── gui.py # Graphical interface (Tkinter)
             ├── main.py # Main logic triggered by GUI
             │
-
             ├── Process_OS/
-
-│ ├── windows_process.py # Windows-specific logic
-
-│ ├── linux_process.py # Linux-specific logic
-
-│ └── unix_process.py # macOS-specific logic
-
-│
-
-├── reporte.log # Plain text log (auditing)
-
-├── reporte.json # Structured report with student info
-
-├── requirements.txt # Required dependencies
-
-└── README.md # (This file)
+            │ ├── windows_process.py # Windows-specific logic
+            │ ├── linux_process.py # Linux-specific logic
+            │ └── unix_process.py # macOS-specific logic
+            │
+            ├── reporte.log # Plain text log (auditing)
+            ├── reporte.json # Structured report with student info
+            └── README.md # (This file)
 
 
 ## 🧰 Requirements
