@@ -23,40 +23,42 @@ This project implements a system to **monitor and block unauthorized processes**
 
 project-root/
 │
+
 ├── gui.py # Graphical interface (Tkinter)
+
 ├── main.py # Main logic triggered by GUI
+
 │
+
 ├── Process_OS/
+
 │ ├── windows_process.py # Windows-specific logic
+
 │ ├── linux_process.py # Linux-specific logic
+
 │ └── unix_process.py # macOS-specific logic
+
 │
+
 ├── reporte.log # Plain text log (auditing)
+
 ├── reporte.json # Structured report with student info
+
 ├── requirements.txt # Required dependencies
+
 └── README.md # (This file)
 
-yaml
-Copy
-Edit
-
----
 
 ## 🧰 Requirements
 
-
-nginx
-Copy
-Edit
 psutil
-tk
+datetime
+os
+logging
 
-▶️ How to Use
+
+## ▶️ How to Use
 Run the graphical interface:
-
-bash
-Copy
-Edit
 python gui.py
 Enter student details: name, ID, and email.
 
@@ -64,55 +66,37 @@ Click "Start Monitoring" to begin the exam monitoring session.
 
 The system will:
 
-Automatically detect the host OS.
+-Automatically detect the host OS.
 
-Load the appropriate script from Process_OS/.
+-Load the appropriate script from Process_OS/.
 
-Identify active processes.
+-Identify active processes.
 
-Compare against the whitelist.
+-Compare against the whitelist.
 
-Block unapproved processes.
+-Block unapproved processes.
 
-Log violations in reporte.log and reporte.json.
+-Log violations in reporte.log and reporte.json.
 
 When "Stop" is clicked, monitoring ends and reports are generated.
 
-🧾 Generated Reports
+##🧾 Generated Reports
 reporte.log: Plain text log with timestamp, process name, PID, and termination reason.
 
 reporte.json: Includes student information and a list of blocked processes in JSON format.
 
-📌 Considerations
-⚠️ Configure the whitelist properly to avoid terminating essential system processes.
+##📌 Considerations
+-⚠️ In case you want to increment the whitelist process, configure the whitelist properly to avoid terminating essential system processes.
 
-✅ You can edit the WHITELIST in each *_process.py file.
+-✅ You can edit the WHITELIST in each *_process.py file.
 
-💻 Ideal for university labs, supervised classrooms, or virtual assessments.
+-💻 Ideal for university labs, supervised classrooms, or virtual assessments.
 
-🧪 Example Whitelist (windows_process.py)
-python
-Copy
-Edit
-WHITELIST = {
-    "System",
-    "explorer.exe",
-    "python.exe",
-    "cmd.exe",
-    "svchost.exe"
-    # Add allowed processes here
-}
-❗ Limitations
-Some orphaned or unnamed processes might not be verifiable.
 
-The current whitelist is based on testing across 10 different laptops and OS configurations.
-
+##❗ Limitations
+Some orphaned or unnamed processes might not be verifiable. The current whitelist is based on testing across 10 different laptops and OS configurations.
 Ensure that critical system processes are never terminated.
 
-👨‍💻 Author
-Developed by [Your Name Here]
-Yachay Tech University
-Course: Introduction to Programming
 
 📝 License
 This project is for educational use. You are free to modify and adapt it for academic purposes.
