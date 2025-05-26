@@ -25,9 +25,7 @@ project-root/
             │
 
             ├── gui.py # Graphical interface (Tkinter)
-
             ├── main.py # Main logic triggered by GUI
-
             │
 
             ├── Process_OS/
