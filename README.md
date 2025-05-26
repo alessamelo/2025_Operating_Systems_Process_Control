@@ -40,8 +40,11 @@ project-root/
 ## 🧰 Requirements
 
 psutil
+
 datetime
+
 os
+
 logging
 
 
@@ -73,7 +76,7 @@ reporte.log: Plain text log with timestamp, process name, PID, and termination r
 
 reporte.json: Includes student information and a list of blocked processes in JSON format.
 
-##📌 Considerations
+## 📌 Considerations
 -⚠️ In case you want to increment the whitelist process, configure the whitelist properly to avoid terminating essential system processes.
 
 -✅ You can edit the WHITELIST in each *_process.py file.
@@ -81,7 +84,7 @@ reporte.json: Includes student information and a list of blocked processes in JS
 -💻 Ideal for university labs, supervised classrooms, or virtual assessments.
 
 
-##❗ Limitations
+## ❗ Limitations
 Some orphaned or unnamed processes might not be verifiable. The current whitelist is based on testing across 10 different laptops and OS configurations.
 Ensure that critical system processes are never terminated.
 
